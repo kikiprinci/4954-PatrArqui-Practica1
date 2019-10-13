@@ -5,11 +5,9 @@ import mastermind.controllers.Logic;
 import mastermind.views.View;
 import mastermind.views.console.ConsoleView;
 
-//public abstract class Mastermind {
-public class Mastermind {
+public abstract class Mastermind {
 
 	private Logic logic;
-
 	private View view;
 
 	protected Mastermind() {
@@ -30,5 +28,7 @@ public class Mastermind {
 			}
 		} while (acceptorController != null);
 	}
+
+	protected abstract Logic createLogic();
 
 }
