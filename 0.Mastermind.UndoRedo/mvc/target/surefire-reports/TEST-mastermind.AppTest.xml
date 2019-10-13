@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="mastermind.AppTest" time="0.1" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="c:\Kiko\Master CloudApps 2019\02 - 4954 - Patrones y arquitectura software\Semana 09-10-2019\Practica3\0.Mastermind.UndoRedo\mvc\target\test-classes;c:\Kiko\Master CloudApps 2019\02 - 4954 - Patrones y arquitectura software\Semana 09-10-2019\Practica3\0.Mastermind.UndoRedo\mvc\target\classes;C:\Users\farbo\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\farbo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value=""/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="user.country.format" value="ES"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\farbo\AppData\Local\Temp\surefire5465346873742386057\surefirebooter6899385552434259261.jar C:\Users\farbo\AppData\Local\Temp\surefire5465346873742386057 2019-10-13T17-48-53_605-jvmRun1 surefire1559759942402144923tmp surefire_05271606287398955063tmp"/>
+    <property name="surefire.test.class.path" value="c:\Kiko\Master CloudApps 2019\02 - 4954 - Patrones y arquitectura software\Semana 09-10-2019\Practica3\0.Mastermind.UndoRedo\mvc\target\test-classes;c:\Kiko\Master CloudApps 2019\02 - 4954 - Patrones y arquitectura software\Semana 09-10-2019\Practica3\0.Mastermind.UndoRedo\mvc\target\classes;C:\Users\farbo\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\farbo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\farbo"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre"/>
+    <property name="basedir" value="c:\Kiko\Master CloudApps 2019\02 - 4954 - Patrones y arquitectura software\Semana 09-10-2019\Practica3\0.Mastermind.UndoRedo\mvc"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\farbo\AppData\Local\Temp\surefire5465346873742386057\surefirebooter6899385552434259261.jar"/>
+    <property name="sun.boot.class.path" value="C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\resources.jar;C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\rt.jar;C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\sunrsasign.jar;C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\jsse.jar;C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\jce.jar;C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\charsets.jar;C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\jfr.jar;C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_222-b10"/>
+    <property name="user.name" value="farbo"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\farbo\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\farbo\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_222"/>
+    <property name="user.dir" value="c:\Kiko\Master CloudApps 2019\02 - 4954 - Patrones y arquitectura software\Semana 09-10-2019\Practica3\0.Mastermind.UndoRedo\mvc"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="user.language.format" value="es"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\System32\OpenSSH\;C:\Users\farbo\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\TerraForm\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\bin;C:\Users\farbo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\farbo\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\farbo\.dotnet\tools;C:\Users\farbo\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="AdoptOpenJDK"/>
+    <property name="java.vm.version" value="25.222-b10"/>
+    <property name="java.ext.dirs" value="C:\Users\farbo\AppData\Local\Programs\AdoptOpenJDK\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="mastermind.AppTest" time="0.004"/>
+</testsuite>
