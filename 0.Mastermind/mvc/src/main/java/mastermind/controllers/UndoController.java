@@ -2,18 +2,14 @@ package mastermind.controllers;
 
 import mastermind.models.Session;
 
-public class UndoController extends Controller {
+public abstract class UndoController extends Controller {
 
     UndoController(Session session) {
         super(session);
     }
 
-    void undo() {
-        this.session.undo();
-    }
+    public abstract void undo();
 
-    boolean undoable() {
-        return this.session.undoable();
-    }
+    public abstract boolean undoable();
 
 }
