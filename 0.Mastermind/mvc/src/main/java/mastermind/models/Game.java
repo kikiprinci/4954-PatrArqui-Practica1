@@ -46,6 +46,10 @@ public class Game {
 		return this.attempts;
 	}
 
+	public SecretCombination getSecretCombination() {
+		return this.secretCombination;
+	}
+
 	public List<Color> getColors(int position) {
 		return this.proposedCombinations.get(position).colors;
 	}
@@ -63,28 +67,28 @@ public class Game {
 	}
 
 	public Memento createMemento() {
-		Memento memento = new Memento();
+		Memento memento = new Memento(this.secretCombination, this.attempts);
 
 		for (int i = 0; i < Game.MAX_LONG; i++) {
-			//memento.addProposedCombination(this.proposedCombinations.get(i).copy());
+			memento.addProposedCombination(this.proposedCombinations.get(i).copy());
 		}
 
 		for (int i = 0; i < Game.MAX_LONG; i++) {
-			//memento.addResultCombination(this.results.get(i).copy());
+			memento.addResultCombination(this.results.get(i).copy());
 		}
 
 		return memento;
 	}
 
 	public void restore(Memento memento) {
-		this.results =new ArrayList<>();
-		this.proposedCombinations =new ArrayList<>();
+		this.results = new ArrayList<>();
+		this.proposedCombinations = new ArrayList<>();
 		for (int i = 0; i < Game.MAX_LONG; i++) {
-			//memento.addProposedCombination(this.proposedCombinations.get(i).copy());
+			memento.addProposedCombination(this.proposedCombinations.get(i).copy());
 		}
 
 		for (int i = 0; i < Game.MAX_LONG; i++) {
-			//memento.addResultCombination(this.results.get(i).copy());
+			memento.addResultCombination(this.results.get(i).copy());
 		}
 	}
 

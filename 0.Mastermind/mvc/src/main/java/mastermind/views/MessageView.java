@@ -6,9 +6,9 @@ public enum MessageView {
 	RESULT(" --> #blacks blacks and #whites whites"),
 	TITLE("----- MASTERMIND -----"),
 	SECRET("*"),
+	PROPOSED_COMBINATION("1) Propose a combination "),
 	WINNER("You've won!!! ;-)"),
 	LOOSER("You've lost!!! :-(");
-	
 
 	private String message;
 	
