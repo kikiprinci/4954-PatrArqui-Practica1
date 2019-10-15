@@ -43,4 +43,3 @@ mastermind\models\Result.class
 mastermind\views\graphics\GraphicsView.class
 mastermind\views\graphics\Constraints.class
 mastermind\views\MessageView.class
-mastermind\controllers\ProposalController.class

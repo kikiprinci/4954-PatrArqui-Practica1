@@ -5,7 +5,6 @@ import mastermind.controllers.Logic;
 import mastermind.views.View;
 import mastermind.views.console.ConsoleView;
 
-//public abstract class Mastermind {
 public class Mastermind {
 
 	private Logic logic;

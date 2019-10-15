@@ -26,7 +26,8 @@ class Result {
 	}
 
 	public Result copy() {
-		return new Result(this.blacks, this.whites);
+		Result copy = new Result(this.blacks, this.whites);
+		return copy;
 	}
 
 }

@@ -1,5 +1,6 @@
 package mastermind.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import mastermind.types.Color;
@@ -24,7 +25,8 @@ public class ProposedCombination extends Combination {
 	}
 
 	public ProposedCombination copy() {
-		return new ProposedCombination(this.colors);
+		ProposedCombination copy = new ProposedCombination(new ArrayList<>(this.colors));
+		return copy;
 	}
 
 }
