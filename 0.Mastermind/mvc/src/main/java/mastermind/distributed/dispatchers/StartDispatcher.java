@@ -1,4 +1,4 @@
-package main.java.mastermind.distributed.dispatchers;
+package mastermind.distributed.dispatchers;
 
 import mastermind.controllers.StartController;
 import mastermind.controllers.implementation.StartControllerImplementation;

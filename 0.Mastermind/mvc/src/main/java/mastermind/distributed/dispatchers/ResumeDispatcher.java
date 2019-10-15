@@ -1,4 +1,4 @@
-package main.java.mastermind.distributed.dispatchers;
+package mastermind.distributed.dispatchers;
 
 import mastermind.controllers.ResumeController;
 import mastermind.controllers.implementation.ResumeControllerImplementation;

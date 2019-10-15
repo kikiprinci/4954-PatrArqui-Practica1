@@ -1,4 +1,4 @@
-package main.java.mastermind.distributed.dispatchers;
+package mastermind.distributed.dispatchers;
 
 import mastermind.models.Card;
 import mastermind.models.Error;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class TCPIP extends klondike.utils.TCPIP {
+public class TCPIP extends mastermind.utils.TCPIP {
 
     private static final int PORT = 2020;
 

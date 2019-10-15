@@ -1,4 +1,4 @@
-package main.java.mastermind.controllers.implementation;
+package mastermind.controllers.implementation;
 
 import mastermind.controllers.PlayController;
 import mastermind.controllers.RedoController;

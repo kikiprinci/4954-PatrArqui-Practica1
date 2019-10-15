@@ -1,4 +1,4 @@
-package main.java.mastermind.distributed.dispatchers;
+package mastermind.distributed.dispatchers;
 
 import java.util.HashMap;
 import java.util.Map;

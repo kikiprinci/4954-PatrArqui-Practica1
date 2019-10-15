@@ -1,8 +1,8 @@
-package main.java.mastermind.controllers.implementation;
+package mastermind.controllers.implementation;
 
-import klondike.controllers.StartController;
-import klondike.models.Session;
-import klondike.models.SessionImplementation;
+import mastermind.controllers.StartController;
+import mastermind.models.Session;
+import mastermind.models.SessionImplementation;
 
 public class StartControllerImplementation extends StartController {
 
