@@ -5,10 +5,10 @@ import java.util.Random;
 
 import mastermind.types.Color;
 
-class SecretCombination extends Combination {
+public class SecretCombination extends Combination {
 
-	SecretCombination() {
-		for(Color color: Color.values()) {
+	public SecretCombination() {
+		for (Color color : Color.values()) {
 			this.colors.add(color);
 		}
 		Random random = new Random(System.currentTimeMillis());
@@ -18,7 +18,7 @@ class SecretCombination extends Combination {
 		Collections.shuffle(this.colors);
 	}
 
-	Result getResult(ProposedCombination proposedCombination) {
+	public Result getResult(ProposedCombination proposedCombination) {
 		int blacks = 0;
 		for (int i = 0; i < this.colors.size(); i++) {
 			if (proposedCombination.contains(this.colors.get(i), i)) {
@@ -32,6 +32,11 @@ class SecretCombination extends Combination {
 			}
 		}
 		return new Result(blacks, whites - blacks);
+	}
+
+	public SecretCombination copy(){
+		SecretCombination copy = new SecretCombination();
+		return copy;
 	}
 
 }

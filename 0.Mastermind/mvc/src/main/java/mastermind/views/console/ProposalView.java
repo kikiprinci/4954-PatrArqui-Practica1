@@ -18,11 +18,14 @@ public class ProposalView extends WithConsoleView {
 			error = playController.addProposedCombination(colors);
 			if (error != null) {
 				new ErrorView(error).writeln();
-			}
+			} else
+				playController.addProposedCombination(colors);
 		} while (error != null);
+
 		this.console.writeln();
 		new AttemptsView(playController).writeln();
 		new SecretCombinationView(playController).writeln();
+
 		for (int i = 0; i < playController.getAttempts(); i++) {
 			new ProposedCombinationView(playController).write(i);
 			new ResultView(playController).writeln(i);

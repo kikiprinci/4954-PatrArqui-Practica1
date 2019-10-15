@@ -4,8 +4,6 @@ import java.util.List;
 
 import mastermind.types.Color;
 
-//import java.util.Stack;
-
 public class Session {
 
     private Game game;
@@ -40,6 +38,13 @@ public class Session {
 
     public void addProposedCombination(List<Color> colors) {
         this.game.addProposedCombination(colors);
+
+        if (this.game.isWinner() || this.game.isLooser()) {
+            this.next();
+        }
+
+        this.registry.registry();
+
     }
 
     public boolean isLooser() {

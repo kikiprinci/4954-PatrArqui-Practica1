@@ -6,33 +6,83 @@ import mastermind.models.Combination;
 import mastermind.types.Color;
 import mastermind.types.Error;
 
-public abstract class PlayController extends AcceptorController {
+public class PlayController extends AcceptorController {
+
+    private UndoController undoController;
+
+    private RedoController redoController;
 
     PlayController(Session session) {
         super(session);
+        this.undoController = new UndoController(this.session);
+        this.redoController = new RedoController(this.session);
     }
 
-    public abstract Error addProposedCombination(List<Color> colors);
+    public Error addProposedCombination(List<Color> colors) {
+        Error error = null;
+        if (colors.size() != Combination.getWidth()) {
+            error = Error.WRONG_LENGTH;
+        } else {
+            for (int i = 0; i < colors.size(); i++) {
+                if (colors.get(i) == null) {
+                    error = Error.WRONG_CHARACTERS;
+                } else {
+                    for (int j = i + 1; j < colors.size(); j++) {
+                        if (colors.get(i) == colors.get(j)) {
+                            error = Error.DUPLICATED;
+                        }
+                    }
+                }
+            }
+        }
+        if (error == null) {
+            this.session.addProposedCombination(colors);
+            if (this.session.isWinner() || this.session.isLooser()) {
+                this.session.next();
+            }
+        }
+        return error;
+    }
 
-    public abstract void undo();
+    public void undo() {
+        this.undoController.undo();
+    }
 
-    public abstract void redo();
+    public void redo() {
+        this.redoController.redo();
+    }
 
-    public abstract boolean undoable();
+    public boolean undoable() {
+        return this.undoController.undoable();
+    }
 
-    public abstract boolean redoable();
+    public boolean redoable() {
+        return this.redoController.redoable();
+    }
 
-    public abstract boolean isWinner();
+    public boolean isWinner() {
+        return this.session.isWinner();
+    }
 
-    public abstract boolean isLooser();
+    public boolean isLooser() {
+        return this.session.isLooser();
+    }
 
-    public abstract int getAttempts();
+    public int getAttempts() {
+        return this.session.getAttempts();
+    }
 
-    public abstract List<Color> getColors(int position);
+    public List<Color> getColors(int position) {
+        return this.session.getColors(position);
+    }
 
-    public abstract int getBlacks(int position);
+    public int getBlacks(int position) {
+        return this.session.getBlacks(position);
+    }
 
-    public abstract int getWhites(int position);
+    public int getWhites(int position) {
+        return this.session.getWhites(position);
+    }
 
     @Override
     public void accept(ControllersVisitor controllerVisitor) {

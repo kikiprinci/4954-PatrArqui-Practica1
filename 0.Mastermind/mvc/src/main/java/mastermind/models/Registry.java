@@ -17,6 +17,14 @@ public class Registry {
         this.mementoList.add(undoCount, this.game.createMemento());
     }
 
+    public void registry() {
+        for (int i = 0; i < this.undoCount; i++) {
+            this.mementoList.remove(0);
+        }
+        this.undoCount = 0;
+        this.mementoList.add(this.undoCount, this.game.createMemento());
+    }
+
     public void undo(Game game) {
         this.undoCount++;
         game.restore(this.mementoList.get(this.undoCount));
