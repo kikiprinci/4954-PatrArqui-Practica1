@@ -1,4 +1,4 @@
-package main.java.mastermind.distributed;
+package mastermind.distributed;
 
 import mastermind.controllers.StartController;
 import mastermind.distributed.dispatchers.FrameType;

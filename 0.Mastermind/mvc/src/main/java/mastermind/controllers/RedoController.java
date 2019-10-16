@@ -2,17 +2,17 @@ package mastermind.controllers;
 
 import mastermind.models.Session;
 
-class RedoController extends Controller {
+public class RedoController extends Controller {
 
-    RedoController(Session session) {
+    public RedoController(Session session) {
         super(session);
     }
 
-    void redo() {
+    public void redo() {
         this.session.redo();
     }
 
-    boolean redoable() {
+    public boolean redoable() {
         return this.session.redoable();
     }
 
