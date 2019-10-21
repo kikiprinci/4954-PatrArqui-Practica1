@@ -10,19 +10,3 @@
 * Master: informacion en el readme
 * undo-redo: patrones Command, Composite
 * client-server: patrones Proxy, DAO,
-
-   
-## Diagrama MasterMind
-
-<p align="center">
-  <img alt="" src="">
-</p>
-
-### PlantUML
- 
- ```PlantUML
-@startuml
-
-
-@enduml
-```
