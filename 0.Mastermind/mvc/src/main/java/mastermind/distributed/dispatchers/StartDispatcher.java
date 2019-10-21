@@ -1,6 +1,5 @@
 package mastermind.distributed.dispatchers;
 
-import mastermind.controllers.StartController;
 import mastermind.controllers.implementation.StartControllerImplementation;
 
 public class StartDispatcher extends Dispatcher {

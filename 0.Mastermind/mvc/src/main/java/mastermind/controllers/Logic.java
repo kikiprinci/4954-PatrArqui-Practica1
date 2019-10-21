@@ -6,14 +6,14 @@ import java.util.Map;
 import mastermind.models.Session;
 import mastermind.models.StateValue;
 
-public abstract class Logic {
+public class Logic {
 
 	protected Session session;
 
 	protected Map<StateValue, AcceptorController> controllers;
 
 	public Logic() {
-		this.controllers = new HashMap<>();
+		this.controllers = new HashMap<StateValue, AcceptorController>();
 	}
 
 	public AcceptorController getController() {

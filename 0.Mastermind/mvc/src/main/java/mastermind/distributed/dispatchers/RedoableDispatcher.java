@@ -1,6 +1,5 @@
 package mastermind.distributed.dispatchers;
 
-import mastermind.controllers.PlayController;
 import mastermind.controllers.implementation.PlayControllerImplementation;
 
 public class RedoableDispatcher extends Dispatcher {

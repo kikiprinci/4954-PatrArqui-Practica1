@@ -1,5 +1,6 @@
-package main.java.mastermind.distributed;
+package mastermind;
 
+import mastermind.distributed.LogicImplementationServer;
 import mastermind.distributed.dispatchers.DispatcherPrototype;
 
 public class MastermindServer {

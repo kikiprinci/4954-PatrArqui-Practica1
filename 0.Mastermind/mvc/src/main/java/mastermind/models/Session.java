@@ -35,4 +35,6 @@ public interface Session {
     void redo();
 
     void resume();
+
+    String getName();
 }

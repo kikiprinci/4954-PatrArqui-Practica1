@@ -12,7 +12,11 @@ public class GameController extends Controller {
         super(session);
     }
 
-    public Error addProposedCombination(List<Color> colors) {
+    public void addProposedCombination(List<Color> colors) {
+        this.session.addProposedCombination(colors);
+    }
+
+    public Error checkProposedCombination(List<Color> colors) {
         Error error = null;
         if (colors.size() != Combination.getWidth()) {
             error = Error.WRONG_LENGTH;
@@ -27,12 +31,6 @@ public class GameController extends Controller {
                         }
                     }
                 }
-            }
-        }
-        if (error == null) {
-            this.session.addProposedCombination(colors);
-            if (this.session.isWinner() || this.session.isLooser()) {
-                this.session.next();
             }
         }
         return error;
@@ -60,6 +58,10 @@ public class GameController extends Controller {
 
     public int getWhites(int position) {
         return this.session.getWhites(position);
+    }
+
+    public void resume() {
+        this.session.resume();
     }
 
 }

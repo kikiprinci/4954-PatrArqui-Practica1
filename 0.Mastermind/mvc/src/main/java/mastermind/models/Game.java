@@ -1,6 +1,7 @@
 package mastermind.models;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import mastermind.types.Color;
 
@@ -87,6 +88,26 @@ public class Game {
 			memento.addProposedCombination(this.proposedCombinations.get(i).copy());
 			memento.addResultCombination(this.results.get(i).copy());
 		}
+	}
+
+	public void setAttempts(int attempts) {
+		this.attempts = attempts;
+	}
+
+	public void addProposedCombination(ProposedCombination proposedCombination) {
+		this.proposedCombinations.add(proposedCombination);
+	}
+
+	public ProposedCombination getProposedCombination(int position) {
+		return this.proposedCombinations.get(position);
+	}
+
+	public Result getResult(int position) {
+		return this.results.get(position);
+	}
+
+	public void addResult(Result result) {
+		this.results.add(result);
 	}
 
 }

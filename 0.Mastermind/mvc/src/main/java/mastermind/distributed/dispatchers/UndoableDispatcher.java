@@ -1,17 +1,16 @@
-package main.java.mastermind.distributed.dispatchers;
+package mastermind.distributed.dispatchers;
 
-import mastermind.controllers.PlayController;
 import mastermind.controllers.implementation.PlayControllerImplementation;
 
-public class UndoDispatcher extends Dispatcher {
+public class UndoableDispatcher extends Dispatcher {
 
-    public UndoDispatcher(PlayControllerImplementation playControllerImplementation) {
+    public UndoableDispatcher(PlayControllerImplementation playControllerImplementation) {
         super(playControllerImplementation);
     }
 
     @Override
     public void dispatch() {
-        ((PlayControllerImplementation) this.acceptorController).undo();
+        ((PlayControllerImplementation) this.acceptorController).undoable();
     }
 
 }

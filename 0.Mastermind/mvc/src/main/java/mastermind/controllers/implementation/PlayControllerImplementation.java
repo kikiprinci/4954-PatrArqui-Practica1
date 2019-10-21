@@ -2,31 +2,38 @@ package mastermind.controllers.implementation;
 
 import java.util.List;
 
+import mastermind.controllers.ExitController;
 import mastermind.controllers.GameController;
 import mastermind.controllers.PlayController;
 import mastermind.controllers.RedoController;
 import mastermind.controllers.UndoController;
-import mastermind.types.Error;
-import mastermind.types.Color;
-import mastermind.models.Combination;
 import mastermind.models.Session;
+import mastermind.types.Color;
+import mastermind.types.Error;
 
 public class PlayControllerImplementation extends PlayController {
 
     private UndoController undoController;
     private RedoController redoController;
     private GameController gameController;
+    private ExitController exitController;
 
-    PlayControllerImplementation(Session session) {
+    public PlayControllerImplementation(Session session) {
         super(session);
         this.undoController = new UndoController(this.session);
         this.redoController = new RedoController(this.session);
         this.gameController = new GameController(this.session);
+        this.exitController = new ExitController(this.session);
     }
 
     @Override
-    public Error addProposedCombination(List<Color> colors) {
-        return this.gameController.addProposedCombination(colors);
+    public void addProposedCombination(List<Color> colors) {
+        this.gameController.addProposedCombination(colors);
+    }
+
+    @Override
+    public Error checkProposedCombination(List<Color> colors) {
+        return this.gameController.checkProposedCombination(colors);
     }
 
     @Override
@@ -79,4 +86,13 @@ public class PlayControllerImplementation extends PlayController {
         return this.gameController.getWhites(position);
     }
 
+    @Override
+    public void next() {
+        this.exitController.next();
+    }
+
+    @Override
+    public void resume() {
+        this.gameController.resume();
+    }
 }

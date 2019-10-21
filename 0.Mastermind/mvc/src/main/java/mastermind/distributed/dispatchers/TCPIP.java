@@ -1,13 +1,13 @@
 package mastermind.distributed.dispatchers;
 
-import mastermind.models.Card;
-import mastermind.models.Error;
-import mastermind.models.Number;
-import mastermind.models.Suit;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+
+import mastermind.types.Color;
+import mastermind.types.Error;
 
 public class TCPIP extends mastermind.utils.TCPIP {
 
@@ -62,56 +62,21 @@ public class TCPIP extends mastermind.utils.TCPIP {
         return Error.valueOf(error);
     }
 
-    public void send(Suit suit) {
-        if (suit == null) {
+    public void send(Color color) {
+        if (color == null) {
             this.send("null");
         } else {
-            this.send(suit.name());
+            this.send(color.name());
         }
     }
 
-    public Number receiveNumber() {
-        String number = this.receiveLine();
-        if (number.equals("null")) {
-            return null;
+    public List<Color> receiveColors() {
+        String characters = this.receiveLine();
+        List<Color> colors = new ArrayList<Color>();
+        for (int i = 0; i < characters.length(); i++) {
+            colors.add(mastermind.views.ColorView.getInstance(characters.charAt(i)));
         }
-        return Number.valueOf(number);
-    }
-
-    public void send(Number number) {
-        if (number == null) {
-            this.send("null");
-        } else {
-            this.send(number.name());
-        }
-    }
-
-    public Suit receiveSuit() {
-        String suit = this.receiveLine();
-        if (suit.equals("null")) {
-            return null;
-        }
-        return Suit.valueOf(suit);
-    }
-
-    public void send(Card card) {
-        if (card == null) {
-            this.send("null");
-        } else {
-            this.send(card.getSuit());
-            this.send(card.getNumber());
-            this.send(card.isFacedUp());
-        }
-    }
-
-    public Card receiveCard() {
-        Suit suit = this.receiveSuit();
-        if (suit == null) {
-            return null;
-        }
-        Number number = this.receiveNumber();
-        boolean facedUp = this.receiveBoolean();
-        return new Card(suit, number, facedUp);
+        return colors;
     }
 
     @Override

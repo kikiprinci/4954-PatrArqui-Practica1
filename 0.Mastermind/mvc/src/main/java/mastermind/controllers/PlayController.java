@@ -1,6 +1,7 @@
 package mastermind.controllers;
 
 import java.util.List;
+
 import mastermind.models.Session;
 import mastermind.types.Color;
 import mastermind.types.Error;
@@ -11,7 +12,9 @@ public abstract class PlayController extends AcceptorController {
         super(session);
     }
 
-    public abstract Error addProposedCombination(List<Color> colors);
+    public abstract void addProposedCombination(List<Color> colors);
+
+    public abstract Error checkProposedCombination(List<Color> colors);
 
     public abstract void undo();
 
@@ -27,11 +30,15 @@ public abstract class PlayController extends AcceptorController {
 
     public abstract int getAttempts();
 
+    public abstract void resume();
+
     public abstract List<Color> getColors(int position);
 
     public abstract int getBlacks(int position);
 
     public abstract int getWhites(int position);
+
+    public abstract void next();
 
     @Override
     public void accept(ControllersVisitor controllerVisitor) {

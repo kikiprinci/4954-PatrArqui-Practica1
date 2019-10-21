@@ -1,7 +1,9 @@
-package main.java.mastermind.distributed;
+package mastermind;
 
-import mastermind.Klondike;
 import mastermind.controllers.Logic;
+import mastermind.distributed.LogicProxy;
+import mastermind.views.View;
+import mastermind.views.console.ConsoleView;
 
 public class MastermindClient extends Mastermind {
 
@@ -15,6 +17,11 @@ public class MastermindClient extends Mastermind {
     protected Logic createLogic() {
         this.logicProxy = new LogicProxy();
         return this.logicProxy;
+    }
+
+    @Override
+    protected View createView() {
+        return new ConsoleView();
     }
 
     @Override

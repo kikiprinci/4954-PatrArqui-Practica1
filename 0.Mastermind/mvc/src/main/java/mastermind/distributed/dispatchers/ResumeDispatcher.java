@@ -1,6 +1,5 @@
 package mastermind.distributed.dispatchers;
 
-import mastermind.controllers.ResumeController;
 import mastermind.controllers.implementation.ResumeControllerImplementation;
 
 public class ResumeDispatcher extends Dispatcher {

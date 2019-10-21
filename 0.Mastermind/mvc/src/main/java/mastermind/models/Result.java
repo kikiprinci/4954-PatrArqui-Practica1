@@ -1,27 +1,30 @@
 package mastermind.models;
 
-class Result {
+public class Result {
 
 	private int blacks = 0;
 
 	private int whites = 0;
 
-	Result(int blacks, int whites) {
+	public Result(int blacks, int whites) {
 		assert blacks >= 0;
 		assert whites >= 0;
 		this.blacks = blacks;
 		this.whites = whites;
 	}
 
-	boolean isWinner() {
+	public Result() {
+	}
+
+	public boolean isWinner() {
 		return this.blacks == Combination.getWidth();
 	}
 
-	int getBlacks() {
+	public int getBlacks() {
 		return this.blacks;
 	}
 
-	int getWhites() {
+	public int getWhites() {
 		return this.whites;
 	}
 
@@ -30,4 +33,11 @@ class Result {
 		return copy;
 	}
 
+	public void setBlacks(int blacks) {
+		this.blacks = blacks;
+	}
+
+	public void setWhites(int whites) {
+		this.whites = whites;
+	}
 }
