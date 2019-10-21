@@ -1,4 +1,4 @@
-# 4954-PatrDise-Practica1
+# 4954-Patrones y arquitectura software-Practica1
 
 ## Diseño y calidad del Software 
 ### Practica 2
